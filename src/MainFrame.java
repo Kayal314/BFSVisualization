@@ -47,14 +47,12 @@ public class MainFrame
                         if(moveCount==1)
                         {
                             button.setBackground(new Color(90, 55, 166));
-                            graph.adjList[0].get(0).explored=true;
                             startVertex=finalCount;
                             startNode=graph.adjList[finalCount].get(0);
-                            System.out.println(startVertex);
                         }
                         else if(moveCount==2)
                         {
-                            button.setBackground(new Color(186, 45, 59));
+                            button.setBackground(new Color(255, 31, 31));
                             endNode=graph.adjList[finalCount].get(0);
                             searchButton.setBackground(new Color(50, 155, 168));
                         }
@@ -104,6 +102,7 @@ public class MainFrame
         for(j=0;j<35;j++)
             for(i=0;i<22;i++)
                 graph.addEdge(36*i+j,36*i+j+1);
+
     }
     void initializeFrame()
     {
@@ -123,5 +122,6 @@ public class MainFrame
         speedLabel.setBounds(1485,170,70,50);
         panel.add(speedLabel);
         frame.setVisible(true);
+
     }
 }
